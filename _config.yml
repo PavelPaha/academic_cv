@@ -1,0 +1,42 @@
+# Basic Information 
+title: Pavel Vasilev
+position: Student, Yandex School of Data Analysis
+affiliation: Ural Federal University
+email: vasilievpavel4@gmail.com
+
+# Search Engine Optimization (SEO)
+keywords: machine learning, computer vision, nlp, moe, research
+description: Pavel Vasilev's personal website.
+canonical: https://pavelpaha.github.io/
+
+# Links 
+cv_link: assets/files/curriculum_vitae.pdf
+github_link: https://github.com/PavelPaha
+linkedin: https://www.linkedin.com/in/pavel-vasiliev-68a851347/
+telegram: https://t.me/Kurinaya_bulavka
+
+# Images 
+avatar: ./assets/img/avatar.png
+favicon: ./assets/img/favicon.png
+favicon_dark: ./assets/img/favicon-dark.png
+
+# Footnote
+enable_footnote: true
+
+# Auto Dark Mode
+auto_dark_mode: true
+
+# Font
+font: "Sans Serif"
+
+# Theme
+remote_theme: yaoyao-liu/minimal-light
+
+# Excludes
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - minimal-light.gemspec
+  - html_source_file/

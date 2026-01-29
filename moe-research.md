@@ -1,7 +1,6 @@
 ---
 layout: homepage
 title: Expert Specialization in Multimodal Diffusion Models
-permalink: /moe-research.html
 ---
 
 # Investigation of Expert Specialization in Multimodal Diffusion Models
@@ -26,7 +25,7 @@ By replacing dense FFNs with **Mixture of Experts (MoE)** layers, the model can 
 We experimented with the **Show-o** architecture (1.3B parameters), which unifies Autoregressive (text) and Masked Diffusion (image) modeling.
 
 <div style="text-align: center; margin: 20px 0;">
-    <img src="./assets/img/figure_5.png" alt="Show-o Architecture" style="max-width: 100%; border-radius: 5px;">
+    <img src="assets/img/figure_5.png" alt="Show-o Architecture" style="max-width: 100%; border-radius: 5px;">
     <p><em>Base Model: Show-o Unified Transformer (Xie et al., 2024)</em></p>
 </div>
 
@@ -45,8 +44,8 @@ We used a **GShard Gate** with Top-2 selection. To encourage specialization, we 
 We observed a distinct separation of experts handling text and image tokens. The visualizations below show the gating probability distributions for different layers.
 
 <div style="display: flex; justify-content: space-between; margin: 20px 0;">
-    <img src="./assets/img/gates/23_1.png" alt="Gate Distribution 1" style="width: 48%;">
-    <img src="./assets/img/gates/23_2.png" alt="Gate Distribution 2" style="width: 48%;">
+    <img src="assets/img/gates/23_1.png" alt="Gate Distribution 1" style="width: 48%;">
+    <img src="assets/img/gates/23_2.png" alt="Gate Distribution 2" style="width: 48%;">
 </div>
 <p style="text-align: center;"><em>Separation of experts for text and image tokens.</em></p>
 
@@ -58,14 +57,14 @@ We compared the Fréchet Inception Distance (FID) of our MoE model against the b
 While the FID score increased (indicating lower quality), the model successfully learned to route tokens, proving the concept of autonomous specialization.
 
 <div style="text-align: center; margin: 20px 0;">
-    <img src="./assets/img/fid.png" alt="FID Score" style="max-width: 80%;">
+    <img src="assets/img/fid.png" alt="FID Score" style="max-width: 80%;">
 </div>
 
 ### C. Initialization with Taylor Scores (Dense-to-MoE)
 We attempted to initialize experts by calculating the importance of neurons (Taylor Scores) for text and image tasks.
 
 <div style="text-align: center; margin: 20px 0;">
-    <img src="./assets/img/segments.png" alt="Expert Segments" style="max-width: 80%;">
+    <img src="assets/img/segments.png" alt="Expert Segments" style="max-width: 80%;">
     <p><em>Extracting experts from segments based on importance scores.</em></p>
 </div>
 

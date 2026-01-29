@@ -16,9 +16,9 @@ linkedin: https://www.linkedin.com/in/pavel-vasiliev-68a851347/
 telegram: https://t.me/Kurinaya_bulavka
 
 # Images 
-avatar: ./assets/img/avatar.png
-favicon: ./assets/img/favicon.png
-favicon_dark: ./assets/img/favicon-dark.png
+avatar: assets/img/avatar.png
+favicon: assets/img/favicon.png
+favicon_dark: assets/img/favicon-dark.png
 
 # Footnote
 enable_footnote: true

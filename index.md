@@ -21,11 +21,11 @@ My primary research interests lie in **Machine Learning**, specifically **Deep L
 
 ## Research & Projects
 
-### [Research: Expert Specialization in Multimodal Diffusion Models](./moe-research)
+### [Research: Expert Specialization in Multimodal Diffusion Models](moe-research.html)
 *Pavel Vasilev, Daniil Tikhonov. Mentor: Gleb Molodtsov.*
 
 An in-depth investigation into replacing Feed-Forward Networks (FFN) with Mixture of Experts (MoE) in unified multimodal transformer architectures (like Show-o). We explored how models can autonomously specialize experts for different data modalities (Text vs. Image) and domains.
-[**Read more details...**](./moe-research.html)
+[**Read more details...**](moe-research.html)
 
 ### InferD: Distributed LLM Inference Engine
 *Engineering Project*

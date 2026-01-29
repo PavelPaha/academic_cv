@@ -70,7 +70,33 @@ We attempted to initialize experts by calculating the importance of neurons (Tay
 
 **Result:** This initialization method improved the **MMU Score** from **62% to 65%**.
 
-## 4. Conclusion & Future Work
+## 4. Challenges & Unsuccessful Experiments
+
+### D. Data Domain Separation (Failed)
+We hypothesized that the model would separate tokens based on their source dataset (Data Domain), creating specialized "domain experts."
+To encourage this, we even introduced a **Learnable Bias** ($b_i(t)$) to the router, which we gradually annealed.
+
+**Outcome:**
+Despite our efforts, the model **failed to separate tokens by data domain**. The gating distribution remained mixed across different datasets, suggesting that domain-level specialization is not as "natural" for the model as modality-level specialization (Text vs. Image).
+
+<div style="text-align: center; margin: 20px 0;">
+    <img src="assets/img/domains_exp.png" alt="Domain Separation Experiment" style="max-width: 100%;">
+    <p><em>Gating distribution shows no clear separation by data domain.</em></p>
+</div>
+
+### E. Data Quality Issues
+We encountered significant challenges with the quality of the training data, which likely impacted the model's ability to learn fine-grained specializations. Issues included:
+*   **Poor Captioning:** Many images had irrelevant or generic captions.
+*   **Artifacts:** Presence of UI elements, watermarks, or corrupted data in the dataset.
+
+<div style="display: flex; justify-content: space-between; margin: 20px 0;">
+    <img src="assets/img/xdata.png" alt="Data Issue 1" style="width: 32%;">
+    <img src="assets/img/dataset_recaptioning.png" alt="Data Issue 2" style="width: 32%;">
+    <img src="assets/img/mail.png" alt="Data Issue 3" style="width: 32%;">
+</div>
+<p style="text-align: center;"><em>Examples of data quality issues encountered during research.</em></p>
+
+## 5. Conclusion & Future Work
 
 We explored two approaches to scaling and specializing unified models:
 1.  **Scaling (Naive MoE):** Increasing parameter count by copying FFNs. Validated on Text-to-Image (T2I).

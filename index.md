@@ -27,7 +27,7 @@ My primary research interests lie in **Machine Learning**, specifically **Deep L
 An in-depth investigation into replacing Feed-Forward Networks (FFN) with Mixture of Experts (MoE) in unified multimodal transformer architectures (like Show-o). We explored how models can autonomously specialize experts for different data modalities (Text vs. Image) and domains.
 [**Read more details...**](moe-research.html)
 
-### InferD: Distributed LLM Inference Engine
+### [InferD: Distributed LLM Inference Engine](https://github.com/sellerbto/InferD/tree/defence)
 *Engineering Project*
 
 Developed a decentralized engine for LLM inference across multiple nodes. Implemented load balancing using distributed hash tables (DHT), inspired by **SWARM** and **Petals**.
